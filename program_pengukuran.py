@@ -1055,9 +1055,9 @@ print ("")
 print ("Ukuran Trisep")
 print ("")
 
-ukuran1_trisep = int(input("Ukuran 1 (mm) : "))
-ukuran2_trisep = int(input("Ukuran 2 (mm) : "))
-ukuran3_trisep = int(input("Ukuran 3 (mm) : "))
+ukuran1_trisep = float(input("Ukuran 1 (mm) : "))
+ukuran2_trisep = float(input("Ukuran 2 (mm) : "))
+ukuran3_trisep = float(input("Ukuran 3 (mm) : "))
 
 ukuran_trisep_penengah = (ukuran1_trisep+ukuran2_trisep+ukuran3_trisep)/3
 
@@ -1071,9 +1071,9 @@ print ("")
 print ("Ukuran Abdominal")
 print ("")
 
-ukuran1_abdominal = int(input("Ukuran 1 (mm) : "))
-ukuran2_abdominal = int(input("Ukuran 2 (mm) : "))
-ukuran3_abdominal = int(input("Ukuran 3 (mm) : "))
+ukuran1_abdominal = float(input("Ukuran 1 (mm) : "))
+ukuran2_abdominal = float(input("Ukuran 2 (mm) : "))
+ukuran3_abdominal = float(input("Ukuran 3 (mm) : "))
 
 ukuran_abdominal_penengah = (ukuran1_abdominal+ukuran2_abdominal+ukuran3_abdominal)/3
 
@@ -1085,9 +1085,9 @@ print ("Ukuran Gastroknemius")
 print ("")
 
 
-ukuran1_gastro = int(input("Ukuran 1 (mm) : "))
-ukuran2_gastro = int(input("Ukuran 2 (mm) : "))
-ukuran3_gastro = int(input("Ukuran 3 (mm) : "))
+ukuran1_gastro = float(input("Ukuran 1 (mm) : "))
+ukuran2_gastro = float(input("Ukuran 2 (mm) : "))
+ukuran3_gastro = float(input("Ukuran 3 (mm) : "))
 
 ukuran_gastro_penengah = (ukuran1_gastro+ukuran2_gastro+ukuran3_gastro)/3
 
@@ -1098,7 +1098,7 @@ ukuran_gastro_penengah = (ukuran1_gastro+ukuran2_gastro+ukuran3_gastro)/3
 def jumlah():
 	global jumlah_ukuran1
 	global jumlah_ukuran2
-	global	jumlah_ukuran3
+	global jumlah_ukuran3
 	global jumlah_ukuran_penengah
 
 	print ("")
@@ -1106,9 +1106,9 @@ def jumlah():
 	print ("")
 
 	jumlah_ukuran1 = ukuran1_trisep + ukuran1_abdominal + ukuran1_gastro
-	jumlah_ukuran2 = ukuran2_trisep + ukuran2_abdominal + ukuran2_abdominal
+	jumlah_ukuran2 = ukuran2_trisep + ukuran2_abdominal + ukuran2_gastro
 	jumlah_ukuran3 = ukuran3_trisep + ukuran3_abdominal + ukuran3_gastro
-	jumlah_ukuran_penengah = round(((ukuran_trisep_penengah + ukuran_abdominal_penengah + ukuran_gastro_penengah)/3),2)
+	jumlah_ukuran_penengah = round(((ukuran_trisep_penengah + ukuran_abdominal_penengah + ukuran_gastro_penengah)),2)
 
 
 
@@ -1133,7 +1133,7 @@ if (jantina == "L" or jantina == "l"):
 	print (" Jumlah Ukuran 2 : " + str(jumlah_ukuran2) + " mm")
 	print (" Lemak Ukuran 2 : " + str(peratus_lemak) + "%")
 	kategori()
-	print (" Kategori Ukuran 1 : " +  kategori_name)
+	print (" Kategori Ukuran 2 : " +  kategori_name)
 
 
 	jumlah()
@@ -1141,7 +1141,7 @@ if (jantina == "L" or jantina == "l"):
 	print (" Jumlah Ukuran 3 : " + str(jumlah_ukuran3) + " mm")
 	print (" Lemak Ukuran 3 : " + str(peratus_lemak) + "%")
 	kategori()
-	print (" Kategori Ukuran 1 : " +  kategori_name)
+	print (" Kategori Ukuran 3 : " +  kategori_name)
 
 
 
@@ -1150,7 +1150,7 @@ if (jantina == "L" or jantina == "l"):
 	print (" Jumlah Ukuran Penengah : " + str(jumlah_ukuran_penengah) + " mm")
 	print (" Lemak Ukuran Penengah : " + str(peratus_lemak) + "%")
 	kategori()
-	print (" Kategori Ukuran 1 : " +  kategori_name)
+	print (" Kategori Ukuran Penengah : " +  kategori_name)
 
 	print("")
 
@@ -1171,14 +1171,14 @@ elif (jantina=="P" or jantina=="p"):
 	print (" Jumlah Ukuran 2 : " + str(jumlah_ukuran2) + " mm")
 	print (" Lemak Ukuran 2 : " + str(peratus_lemak) + "%")
 	kategori()
-	print (" Kategori Ukuran 1 : " +  kategori_name)
+	print (" Kategori Ukuran 2 : " +  kategori_name)
 
 	jumlah()
 	lemak_ukuran3_perempuan()
 	print (" Jumlah Ukuran 3 : " + str(jumlah_ukuran3) + " mm")
 	print (" Lemak Ukuran 3 : " + str(peratus_lemak) + "%")
 	kategori()
-	print (" Kategori Ukuran 1 : " +  kategori_name)
+	print (" Kategori Ukuran 3 : " +  kategori_name)
 
 
 	jumlah()
@@ -1186,7 +1186,7 @@ elif (jantina=="P" or jantina=="p"):
 	print (" Jumlah Ukuran Penengah : " + str(jumlah_ukuran_penengah) + " mm")
 	print (" Lemak Ukuran Penengah : " + str(peratus_lemak) + "%")
 	kategori()
-	print (" Kategori Ukuran 1 : " +  kategori_name)
+	print (" Kategori Ukuran Penengah : " +  kategori_name)
 
 	print("")
 
