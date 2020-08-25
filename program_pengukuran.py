@@ -1017,26 +1017,26 @@ def kategori():
 
 	global kategori_name
 
-	if jantina=="L" or "l":
+	if jantina=="L" or jantina=="l":
 
 		if peratus_lemak <6 :
 			kategori_name = "Terlalu Rendah"
-		elif peratus_lemak >=6 and peratus_lemak <=9:
+		elif peratus_lemak >=6 and peratus_lemak <10:
 			kategori_name = "Pinggiran"
-		elif peratus_lemak >=10 and peratus_lemak <=20:
+		elif peratus_lemak >=10 and peratus_lemak <21:
 			kategori_name = "Sihat"
 		elif peratus_lemak >=21 and peratus_lemak <=25:
 			kategori_name = "Marginal"
 		elif peratus_lemak >25:
 			kategori_name = "Lebih Lemak"
 
-	elif jantina=="P" or "p":
+	elif jantina=="P" or jantina=="p":
 
-		if peratus_lemak <=10 :
+		if peratus_lemak <11 :
 			kategori_name = "Terlalu Rendah"
-		elif peratus_lemak >=11 and peratus_lemak <=16:
+		elif peratus_lemak >=11 and peratus_lemak <17:
 			kategori_name = "Pinggiran"
-		elif peratus_lemak >=17 and peratus_lemak <=28:
+		elif peratus_lemak >=17 and peratus_lemak <29:
 			kategori_name = "Sihat"
 		elif peratus_lemak >=29 and peratus_lemak <=35:
 			kategori_name = "Marginal"
